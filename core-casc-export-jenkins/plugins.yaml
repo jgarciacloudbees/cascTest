@@ -117,3 +117,5 @@ plugins:
 - id: workflow-support
 - id: manage-permission
   url: https://updates.jenkins.io/download/plugins/manage-permission/1.0.1/manage-permission.hpi
+- id: workflow-cps
+  
