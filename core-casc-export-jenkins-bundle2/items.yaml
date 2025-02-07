@@ -1,0 +1,57 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: pipeline
+  name: testPipeline2
+  concurrentBuild: true
+  definition:
+    cpsFlowDefinition:
+      sandbox: true
+      script: |
+        pipeline {
+            agent any
+
+            stages {
+                stage('Hello') {
+                    steps {
+                        echo 'Hello World'
+                    }
+                }
+            }
+        }
+  description: ''
+  disabled: false
+  displayName: testPipeline
+  resumeBlocked: false
+- kind: pipeline
+  name: testPipeline
+  concurrentBuild: true
+  definition:
+    cpsFlowDefinition:
+      sandbox: true
+      script: |
+        pipeline {
+            agent any
+
+            stages {
+                stage('Hello') {
+                    steps {
+                        echo 'Hello World'
+                    }
+                }
+            }
+        }
+  description: ''
+  disabled: false
+  displayName: testPipeline
+  resumeBlocked: false
+- kind: folder
+  name: testFolder
+  description: ''
+  displayName: testFolder
+  properties:
+  - envVars: {
+      }
+  - itemRestrictions:
+      filter: false
